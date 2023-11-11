@@ -1,4 +1,4 @@
-![image](https://github.com/AshokGadde/Monopoly-Using-JAVA/assets/82217218/9f30d874-af96-4b5e-b622-141e7d52d515)# Monopoly Game
+# Monopoly Game
 
 ## Problem Description
 
