@@ -1,3 +1,144 @@
+## Monopoly Game
+
+### Problem Description
+
+The Monopoly Game is a classic board game where the objective is to become the wealthiest player through buying, renting, and selling property. The game involves two to eight players and includes various elements such as chance cards, community chest cards, properties, houses, hotels, and more.
+
+### Requirement:
+Two to eight players, monopoly board game
+
+### Setup:
+•	The board is setup by stacking the chance and community chest cards on the board in the spaces provided.
+•	Each player selects a token to move around the board. Each token starts on the GO space. 
+•	Each player receives 1,500 dollars to start the game. 
+•	The 1,500 dollars is given in (2) 500s, (2) 100s, (2) 50s, (6) 20s, (5) 10s, (5) 5s, and (5) 1s. 
+•	One player will need to be designated the banker. The banker will distribute and collect money and manages the properties, houses, and hotels.
+
+### Game Play:
+•	Before the game play begins, each player will roll the dice. The player with the highest total value rolled gets to play first. Play then moves clockwise left. 
+•	On each player’s turn, the dice are rolled, and the player’s token moves spaces equal to the value rolled. Based on the space landed on, an action will be taken.
+
+### Board Spaces and Actions:
+•	Most spaces represent a property. When landed on, the player has the option to purchase the property from the bank. A property’s price is listed on the bottom of the space.
+•	A player may land on a chance space and will draw a chance card. The action described on the chance card is then completed, and the card is returned to the bottom of the pile.
+•	A player may land on the community chest space and will draw a community chest card. The action described on the community chest is then completed, and the card is returned to the bottom of the pile.
+•	The player may land on a tax space and will pay the tax described.
+•	If a player lands on the jail space, nothing happens, as he or she is just visiting.
+•	If a player lands on the free parking space, nothing happens.
+•	If a player lands on the go to jail space, the player goes into jail.
+•	If a player lands on a property space that is already owned by another player, that player will have to pay the owner rent. The amount owed is listed on the property card.
+•	If a player lands on his own property, then he can build houses and hotels in his respective property.
+
+### Winning:
+•	Once a player owes more money than can be paid and has no properties to sell, he or she is declared bankrupt and is out of the game. The last player to remain in the game, after all other players have gone bankrupt, is the winner.
+
+### Rules:
+•	When a player lands on an open property but chooses not to buy the property from the bank for the printed price, the property is auctioned off. All players will make bids, and the highest ending bid will get the property for the final amount bid.
+•	When a player lands on a space that you own, you are responsible for asking and collecting the rent before the next player rolls the dice.
+•	If a player rolls the same number on both dice, he or she will move the amount, complete the required action, and then gets to roll again. This is known as rolling doubles. If a player rolls 3 doubles in a row, that player goes directly to jail without passing go or collecting 200 dollars.
+•	When in jail, a player has 3 ways to get out of jail. One, by rolling the same number on both dice, known as rolling doubles. Also, by playing a get out of jail free card. The get out jail free card can be drawn from the chance or community chest piles, or purchased from another player at an agreed upon price. Or lastly, by paying $50 to the bank before you roll. Then whatever you roll, you will move that many spaces.
+•	If a player owns all the properties of the same colour, the rent doubles. For example, when a player owns all the orange properties, and another player lands on Tennessee ave., the rent would be 28 dollars.
+•	When a player owns all the properties of the same colour, houses can be bought for the properties. The cost of a house is listed on the property card and is paid to the bank. When a house is on a property, the rent increases according to the card. Houses must be split as evenly as possible among the properties meaning each property must have one house before adding a second house to a property.
+•	Once all the properties in a colour have four houses, a hotel can be purchased. This again raises the rent for other players that land on this property. The money spent on hotels is paid to the bank.
+•	The bank may run out of houses and hotels to sell. In this case, a player will have to wait for a house or hotel to be sold back to the bank before buying one.
+•	When needed, a player can sell hotels and houses back to the bank for half the price paid for them. If a property has no houses or hotel on it, a player can sell the property to another player for any amount agreed upon.
+•	A property with no houses or hotel on it can be mortgaged backed to the bank.
+
+### Use Case-1: Different Moves
+
+## DESCRIPTION: When the player rolls die at his turn and moves his miniature toy the various positions for placing are described.
+
+## ACTOR: Player, Miniature toy
+
+## TRIGGER: It is the players turn to roll the dice.
+
+## PRE-CONDITION: The players turn has to come.
+
+## BASIC FLOW (SUNNY DAY SCENARIO):
+1. The game is turn based. The player takes turn and rolls the dice. 
+2. The movement is based on the player’s dice roll. If the dice roll is 2 then player moves forward 2 steps, if the dice roll is 3 then player moves forward 3 steps etc.
+3. After the move new position of the player is visible on the game board. The turn ends when the player hits the End Turn button. 
+4.Then the next player’s turn begins.
+
+## ALTERNATES:
+1.After the player moves to a new cell, based on the type of the cell, he/she may stop at the Go cell 
+2. he/she may proceed to the Jail cell
+3. he/she may stop at the Jail cell 
+4. he/she may stop at Free Parking
+5. he/she may pay rent to the cell owner
+6. he/she may draw a card from Community Chance
+7. he/she may purchase an available tradable cell 
+
+## EXCEPTIONS:  
+no exceptions
+
+## LEVEL: Player level
+
+## POST-CONDITION: The player places his move according to the count on dice and further move position is decided by the cell where toy is placed for count on dice initially.
+
+## STAKE HOLDERS:
+1.Player
+
+## NOUN PHRASES:
+Game, Player, Dice, Game Board, toy
+
+## CONCEPTUAL CLASSES:
+Toy, Player, Dice, Game Board
+
+
+![image](https://github.com/AshokGadde/Monopoly-Using-JAVA/assets/82217218/d8c8d8e6-ec51-4d4c-ad66-084449bd0f1e)
+
+
+
+![image](https://github.com/AshokGadde/Monopoly-Using-JAVA/assets/82217218/c5661869-2777-40b8-ab79-73bd7d875d78)
+
+
+
+### Use Case 2: Pass Go Cell
+
+## DESCRIPTION: When the player rolls die at his turn and moves his miniature toy the movement based on Go cell is described.
+
+## ACTOR: Player
+
+## TRIGGER: It is the players turn to roll the dice.
+
+## PRE-CONDITION: It should be the player’s turn and the player has rolled the dice.
+
+## BASIC FLOW (SUNNY DAY SCENARIO):
+1.The player rolls the dice and he places position according to the count. 
+2.If the player passes the Go cell in the game board during the movement, the player gains $200 from the bank.
+3.Then the next player’s turn begins.
+
+## ALTERNATES:
+1.If the player lands on the Go cell after the movement, the player gains $200 from the bank.
+
+## EXCEPTIONS:  
+no exceptions
+
+## LEVEL: Player Level
+
+## POST-CONDITION: The player places his move according to the count on dice and either during the movement or after the movement if he passes the Go cell he/she earns $200 from the bank.
+
+## STAKE HOLDERS:
+1.Player
+2.Bank
+
+## NOUN PHRASES:
+Player, Dice, Game Board, Bank
+
+## CONCEPTUAL CLASSES:
+Player, Dice, Game Board, Bank
+
+
+![image](https://github.com/AshokGadde/Monopoly-Using-JAVA/assets/82217218/56972c95-76c1-466f-84b3-9ff7d5f62e20)
+
+
+
+![image](https://github.com/AshokGadde/Monopoly-Using-JAVA/assets/82217218/9d04ad4a-2973-45ba-bbcc-c8cd8e9c34a0)
+
+
+
+
 ### Use Case 3: Go to Jail
 
 ## DESCRIPTION: When the player rolls die at his turn and moves his miniature toy if he lands on Go to jail cell the process is described.
